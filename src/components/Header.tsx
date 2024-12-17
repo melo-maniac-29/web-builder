@@ -11,7 +11,7 @@ export function Header() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex justify-between items-center py-4">
-          <Link to="/" className="text-2xl font-bold">Wix</Link>
+          <Link to="/" className="text-2xl font-bold">echo-one</Link>
           <nav className="hidden md:flex space-x-8">
             <Link to="/templates" className="text-gray-600 hover:text-gray-900 transition-colors">Creation</Link>
             <Link to="/business" className="text-gray-600 hover:text-gray-900 transition-colors">Business</Link>
