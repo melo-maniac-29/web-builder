@@ -39,7 +39,7 @@ export function LoadingScreen({ onComplete }: LoadingScreenProps) {
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.2 }}
             >
-              echo-one
+              Wix
             </motion.div>
             <div className="w-64 h-2 bg-gray-800 rounded-full overflow-hidden">
               <motion.div
