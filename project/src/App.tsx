@@ -6,6 +6,7 @@ import { Header } from './components/Header';
 import { Background } from './components/three/Background';
 import { HomePage } from './pages/HomePage';
 import { LoginPage } from './pages/LoginPage';
+import { RegisterPage } from './pages/RegisterPage';
 import { useDarkMode } from './hooks/useDarkMode';
 
 export default function App() {
@@ -27,6 +28,7 @@ export default function App() {
               <Routes>
                 <Route path="/" element={<HomePage />} />
                 <Route path="/login" element={<LoginPage />} />
+                <Route path="/register" element={<RegisterPage />} />
               </Routes>
             </>
           )}
