@@ -18,28 +18,23 @@ export function TeamMember({ name, role, imageUrl, delay }: TeamMemberProps) {
       className="relative group"
     >
       <div className="relative overflow-hidden rounded-2xl">
-        {/* Animated border effect */}
-        <motion.div
-          className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500"
-          animate={{
-            rotate: [0, 360],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "linear"
-          }}
-        />
+        {/* Animated gradient border */}
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 animate-gradient" />
         <div className="absolute inset-[2px] bg-white dark:bg-gray-900 rounded-2xl z-10">
           <div className="p-6">
-            <div className="relative w-48 h-48 mx-auto mb-4">
+            <motion.div 
+              className="relative w-48 h-48 mx-auto mb-4 rounded-xl overflow-hidden"
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.3 }}
+            >
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-500 opacity-20" />
               <img
                 src={imageUrl}
                 alt={name}
-                className="w-full h-full object-cover rounded-xl"
+                className="w-full h-full object-cover"
               />
-            </div>
-            <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-1">
+            </motion.div>
+            <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
               {name}
             </h3>
             <p className="text-gray-600 dark:text-gray-400">{role}</p>
